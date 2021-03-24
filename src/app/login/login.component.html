@@ -1,0 +1,23 @@
+<div class="card my-5">
+    <div class="card-header">LOGIN FORM :</div>
+    <div class="card-body">
+        <form ngForm #f="ngForm" (ngSubmit)="formData(f)">
+            <div class="form-group">
+                <label for="username" class="label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter your username" ngModel name="username" #username="ngModel" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="label">Password</label>
+                <input type="text" class="form-control" placeholder="Enter your password" ngModel name="password" #password="ngModel" required>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn btn-success" [disabled]="!f.valid">Login</button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="btn btn-danger" type="reset">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
