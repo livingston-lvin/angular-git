@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   formData(f: any){
-    console.log(f.form.value);
+    console.log(f.value);
+    f.reset();
   }
 }
